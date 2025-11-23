@@ -2,15 +2,16 @@ import React from "react";
 
 const SkillList = ({ skills, deleteSkill }) => {
   return (
-    <ul>
+    <ul id="skill-list">
       {skills.map((skill, idx) => (
-        <li
-          key={idx}
-          id={`skill-number-${idx}`}
-        >
-          {skill}
-          <button id="skill-delete-btn" onClick={() => deleteSkill(idx)}>Delete</button>
-        </li>
+        <div>
+          <li key={idx} id={`skill-number-${idx}`}>
+            {skill}
+          </li>
+          <button onClick={() => deleteSkill(idx)}>
+            Delete
+          </button>
+        </div>
       ))}
     </ul>
   );
