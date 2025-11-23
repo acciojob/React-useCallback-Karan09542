@@ -2,7 +2,7 @@ import React, { useCallback, useState } from "react";
 import SkillList from "./SkillList";
 
 const UseCallbackComp = () => {
-  const [skills, setSkills] = useState(["HTML", "CSS", "Javascript", "React"]);
+  const [skills, setSkills] = useState(["HTML", "CSS", "JavaScript", "React"]);
 
   const [skill, setSkill] = useState("");
 
