@@ -7,7 +7,7 @@ const UseCallbackComp = () => {
   const [skill, setSkill] = useState("");
 
   const addSkill = useCallback(() => {
-    setSkills([...skills, skill]);
+    setSkills([... new Set([...skills, skill])]);
     setSkill("");
   }, [skills, skill]);
 
