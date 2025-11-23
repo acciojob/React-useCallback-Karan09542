@@ -4,14 +4,9 @@ const SkillList = ({ skills, deleteSkill }) => {
   return (
     <ul id="skill-list">
       {skills.map((skill, idx) => (
-        <div key={idx} >
-          <li id={`skill-number-${idx}`}>
+          <li key={idx} id={`skill-number-${idx}`} onClick={deleteSkill}>
             {skill}
           </li>
-          <button onClick={() => deleteSkill(idx)}>
-            Delete
-          </button>
-        </div>
       ))}
     </ul>
   );
